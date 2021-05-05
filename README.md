@@ -32,23 +32,23 @@ Water:
 ```sh
 Please enter an arbitrary molecular formula:
 #Enter: H2O
-#Return: H2O --> {'H': 2, 'O': 1}
+#Output: H2O --> {'H': 2, 'O': 1}
 ```
 Magnesium Hydroxide
 ```sh
 Please enter an arbitrary molecular formula:
 #Enter: Mg(OH)2
-#Return: Mg(OH)2 --> {'Mg': 1, 'O': 2, 'H': 2}
+#Output: Mg(OH)2 --> {'Mg': 1, 'O': 2, 'H': 2}
 ```
 Fremy Salt:
 ```sh
 Please enter an arbitrary molecular formula:
 #Enter: K4[ON(SO3)2]2
-#Return: K4[ON(SO3)2]2 --> {'K': 4, 'O': 14, 'N': 2, 'S': 4}
+#Output: K4[ON(SO3)2]2 --> {'K': 4, 'O': 14, 'N': 2, 'S': 4}
 ```
 You can also enter formulas without brackets, like in the following example for biotin:
 ```sh
 Please enter an arbitrary molecular formula:
 #Enter: C10H16N2O3S
-#Return: C10H16N2O3S --> {'C': 10, 'H': 16, 'N': 2, 'O': 3, 'S': 1}
+#Output: C10H16N2O3S --> {'C': 10, 'H': 16, 'N': 2, 'O': 3, 'S': 1}
 ```
