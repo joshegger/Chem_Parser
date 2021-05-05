@@ -1,10 +1,5 @@
-# Chem_Parser
-##
-
-
-For a given chemical formula represented by a string, Chem_Parser counts the number of atoms of each element contained in the molecule and returns a dictionary.
-
-
+## Chem_Parser
+## For a given chemical formula represented by a string, Chem_Parser counts the number of atoms of each element contained in the molecule and returns a dictionary
 
 - Approach: RegEx and Recursion
 
