@@ -13,7 +13,18 @@ class MolecularParser:
     # defaultdict allows us to insert key into dict if it doesn't exist
     def __init__(self, formula):
         self.formula = formula
-        self._stack = [defaultdict(int)]
+        self._stack = [defaultdict(int)] #defaultdict(int) is uniquely suited for counting items in sequences and avoiding key errors, for example:
+        
+"""
+>>> from collections import defaultdict
+>>> s = 'mississippi'
+>>> dd = defaultdict(int)
+>>> for letter in s:
+...     dd[letter] += 1
+...
+>>> dd
+defaultdict(<class 'int'>, {'m': 1, 'i': 4, 's': 4, 'p': 2})
+"""
 
     def process_formula(self):
         """
