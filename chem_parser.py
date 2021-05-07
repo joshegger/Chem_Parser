@@ -49,19 +49,19 @@ class MolecularParser:
 
         # If atom is identified:
         if atom:
-            r = formula[len(atom.group()):]
-            self._stack[-1][atom.group(1)] += int(atom.group(2) or 1)
+            r = formula[len(atom.group()):] #this sets the remainder equal to everything after the identified atom (for recursive further processing)
+            self._stack[-1][atom.group(1)] += int(atom.group(2) or 1) #we stack the atom character however many times determined by the multiplier
 
         # If opening brackets encountered:
         elif opening:
-            r = formula[len(opening.group()):]
-            self._stack.append(defaultdict(int))
+            r = formula[len(opening.group()):] #this sets the remainder equal to everything after the opening brackets
+            self._stack.append(defaultdict(int)) 
 
         # If closing brackets encountered:
         elif closing:
-            r = formula[len(closing.group()):]
+            r = formula[len(closing.group()):] #this sets the remainder equal to everything after the closing brackets
             for (k, v) in self._stack.pop().items():
-                self._stack[-1][k] += v * int(closing.group(1) or 1)
+                self._stack[-1][k] += v * int(closing.group(1) or 1) 
 
         # If anything remains, process remainders recursively as nested formulas:
         if r:
