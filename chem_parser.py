@@ -85,7 +85,5 @@ defaultdict(<class 'int'>, {'m': 1, 'i': 4, 's': 4, 'p': 2})
 
     # String representation for the class object
     def __str__(self):
-        """
-        string identifier of the class object
-        """
+
         return self.formula
