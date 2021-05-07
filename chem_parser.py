@@ -72,7 +72,7 @@ defaultdict(<class 'int'>, {'m': 1, 'i': 4, 's': 4, 'p': 2})
         elif closing:
             r = formula[len(closing.group()):] #this sets the remainder equal to everything after the closing brackets
             for (k, v) in self._stack.pop().items():
-                self._stack[-1][k] += v * int(closing.group(1) or 1) 
+                self._stack[-1][k] += v * int(closing.group(1) or 1) #v times amount of molecule k, depending on nesting
 
         # If anything remains, process remainders recursively as nested formulas:
         if r:
